@@ -16,7 +16,7 @@ import { AiOutlineStock } from "react-icons/ai"
           <ul>
 
             <li className="sidebar-item" onClick={() => setShowConsommables(!showConsommables)}>
-              <AiOutlineStock /> Gestion des Consommables
+              <a href="#gestion-consommables"><AiOutlineStock /> Gestion des Consommables</a>
               {showConsommables && (
                 <ul className="submenu">
                   <li className="submenu-item">

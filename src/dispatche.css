@@ -1,0 +1,82 @@
+/* Styles généraux */
+.agency-management {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Styles pour le formulaire d'ajout */
+  .agency-form {
+    margin-bottom: 20px;
+  }
+  
+  .agency-form h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .agency-form button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  /* Styles pour le tableau principal */
+  .agency-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .agency-table th,
+  .agency-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .agency-table th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  /* Styles pour le tableau imbriqué des agences */
+  .agency-consumption {
+    width: 100%;
+  }
+  
+  .agency-consumption td {
+    border: none;
+    padding: 4px 8px;
+  }
+  
+  .agency-consumption tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Styles pour l'input de désignation */
+  .designation-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .agency-table {
+      font-size: 14px;
+    }
+  
+    .agency-form button {
+      width: 100%;
+    }
+  }
+  
+  
