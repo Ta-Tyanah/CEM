@@ -1,0 +1,109 @@
+.page-inscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .conteneur-inscription {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .titre-inscription {
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  
+  .message-erreur {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    background-color: #ffebee;
+    color: #d32f2f;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .formulaire-inscription {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .groupe-champ {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .groupe-champ label {
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .champ-saisie {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .champ-saisie:focus {
+    border-color: #2196f3;
+    outline: none;
+  }
+  
+  .bouton-inscription {
+    padding: 0.75rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem;
+  }
+  
+  .bouton-inscription:hover {
+    background-color: #388e3c;
+  }
+  
+  .lien-connexion {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #666;
+  }
+  
+  .lien-connexion a {
+    color: #2196f3;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .lien-connexion a:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  

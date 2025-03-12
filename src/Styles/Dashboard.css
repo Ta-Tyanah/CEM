@@ -1,0 +1,228 @@
+.dashboard-conteneur {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .dashboard-entete {
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    height: 64px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2196f3;
+    margin: 0;
+  }
+  
+  .bouton-menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .icone-menu {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #333;
+    position: relative;
+  }
+  
+  .icone-menu::before,
+  .icone-menu::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    background-color: #333;
+    left: 0;
+  }
+  
+  .icone-menu::before {
+    top: -8px;
+  }
+  
+  .icone-menu::after {
+    bottom: -8px;
+  }
+  
+  .profil-utilisateur {
+    margin-left: auto;
+    position: relative;
+  }
+  
+  .info-utilisateur {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .info-utilisateur:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .avatar-utilisateur {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .nom-utilisateur {
+    font-weight: 500;
+  }
+  
+  .menu-profil {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 180px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0;
+    z-index: 20;
+    animation: fadeIn 0.2s ease-in-out;
+  }
+  
+  .menu-profil a,
+  .menu-profil button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-profil a:hover,
+  .menu-profil button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .dashboard-corps {
+    display: flex;
+    flex: 1;
+  }
+  
+  .dashboard-sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #e9ecef;
+    padding: 1.5rem 0;
+    height: calc(100vh - 64px);
+    position: sticky;
+    top: 64px;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .dashboard-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .groupe-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .titre-menu {
+    padding: 0 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #6c757d;
+  }
+  
+  .dashboard-navigation a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: #495057;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-left: 3px solid transparent;
+  }
+  
+  .dashboard-navigation a:hover {
+    background-color: #e9ecef;
+    color: #212529;
+  }
+  
+  .dashboard-navigation a.lien-actif {
+    background-color: #e3f2fd;
+    color: #2196f3;
+    border-left-color: #2196f3;
+    font-weight: 500;
+  }
+  
+  .dashboard-contenu {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 64px);
+  }
+  
+  @media (max-width: 768px) {
+    .bouton-menu-mobile {
+      display: block;
+    }
+  
+    .dashboard-sidebar {
+      position: fixed;
+      left: 0;
+      top: 64px;
+      height: calc(100vh - 64px);
+      transform: translateX(-100%);
+      z-index: 5;
+    }
+  
+    .dashboard-sidebar.ouvert {
+      transform: translateX(0);
+    }
+  
+    .dashboard-contenu {
+      width: 100%;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
